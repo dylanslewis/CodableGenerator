@@ -28,7 +28,7 @@ extension JSONType {
 		let swiftStruct = SwiftStruct(name: name, typeForKey: typeForKey, parentTypes: parentTypes)
 		let swiftCodingKeyCases = typeForKey.enumerated().map({ SwiftEnum.SwiftCase(name: $0.element.key.swiftyPropertyName, value: $0.element.key) })
 		let swiftCodingKeys = SwiftEnum(name: "CodingKeys",
-		                                swiftType: "String",
+		                                swiftType: .string,
 		                                protocols: ["CodingKey"],
 		                                swiftCases: swiftCodingKeyCases,
 		                                parentTypes: parentTypes + [swiftStruct])

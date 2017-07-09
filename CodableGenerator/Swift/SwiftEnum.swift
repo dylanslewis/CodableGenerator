@@ -10,12 +10,12 @@ import Foundation
 
 struct SwiftEnum: SwiftType {
 	let name: String
-	let swiftType: String // FIXME: Make generic with T
+	let swiftType: SwiftObject
 	let protocols: [String]
 	let swiftCases: [SwiftCase]
 	var parentTypes: [SwiftType]
 	
-	init(name: String, swiftType: String, protocols: [String], swiftCases: [SwiftCase], parentTypes: [SwiftType]) {
+	init(name: String, swiftType: SwiftObject, protocols: [String], swiftCases: [SwiftCase], parentTypes: [SwiftType]) {
 		self.name = name.swiftyPropertyName
 		self.swiftType = swiftType
 		self.protocols = protocols
@@ -48,7 +48,7 @@ extension SwiftEnum {
 			swiftCodeLines.append(.init(code: "extension \(parentTypes.map({ $0.name }).joined(separator: ".")) {"))
 		}
 		
-		let swiftTypeAndProtocols = [swiftType] + protocols
+		let swiftTypeAndProtocols = [swiftType.stringRepresentation] + protocols
 		swiftCodeLines.append(.init(indentationLevel: baseIndentationLevel, code: "enum \(name): \(swiftTypeAndProtocols.joined(separator: ", ")) {"))
 		swiftCases.forEach { (arg) in
 			let swiftCase = arg
