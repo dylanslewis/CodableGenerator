@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		6546250D1EFEC588009D902E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6546250C1EFEC588009D902E /* main.swift */; };
+		65C5BDF11F124BA40064EBBF /* SwiftObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C5BDF01F124BA40064EBBF /* SwiftObject.swift */; };
+		65C5BDF31F1253A90064EBBF /* JSONType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C5BDF21F1253A90064EBBF /* JSONType.swift */; };
+		65FAE4851F1242EA00495812 /* SwiftStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FAE4841F1242EA00495812 /* SwiftStruct.swift */; };
+		65FAE4871F12430A00495812 /* SwiftProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FAE4861F12430A00495812 /* SwiftProperty.swift */; };
+		65FAE4891F12432500495812 /* SwiftType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FAE4881F12432500495812 /* SwiftType.swift */; };
+		65FAE48B1F12435A00495812 /* SwiftEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FAE48A1F12435A00495812 /* SwiftEnum.swift */; };
+		65FAE48D1F12438F00495812 /* String+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FAE48C1F12438F00495812 /* String+Parsing.swift */; };
+		65FAE48F1F1243A600495812 /* String+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FAE48E1F1243A600495812 /* String+Swift.swift */; };
+		65FAE4931F1243CC00495812 /* SwiftCodeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FAE4921F1243CC00495812 /* SwiftCodeLine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +34,15 @@
 /* Begin PBXFileReference section */
 		654625091EFEC588009D902E /* CodableGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodableGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		6546250C1EFEC588009D902E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		65C5BDF01F124BA40064EBBF /* SwiftObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftObject.swift; sourceTree = "<group>"; };
+		65C5BDF21F1253A90064EBBF /* JSONType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONType.swift; sourceTree = "<group>"; };
+		65FAE4841F1242EA00495812 /* SwiftStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStruct.swift; sourceTree = "<group>"; };
+		65FAE4861F12430A00495812 /* SwiftProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProperty.swift; sourceTree = "<group>"; };
+		65FAE4881F12432500495812 /* SwiftType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftType.swift; sourceTree = "<group>"; };
+		65FAE48A1F12435A00495812 /* SwiftEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEnum.swift; sourceTree = "<group>"; };
+		65FAE48C1F12438F00495812 /* String+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Parsing.swift"; sourceTree = "<group>"; };
+		65FAE48E1F1243A600495812 /* String+Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Swift.swift"; sourceTree = "<group>"; };
+		65FAE4921F1243CC00495812 /* SwiftCodeLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCodeLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +76,33 @@
 			isa = PBXGroup;
 			children = (
 				6546250C1EFEC588009D902E /* main.swift */,
+				65C5BDF21F1253A90064EBBF /* JSONType.swift */,
+				65FAE4911F1243BB00495812 /* Extensions */,
+				65FAE4901F1243B400495812 /* Swift */,
 			);
 			path = CodableGenerator;
+			sourceTree = "<group>";
+		};
+		65FAE4901F1243B400495812 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				65C5BDF01F124BA40064EBBF /* SwiftObject.swift */,
+				65FAE4861F12430A00495812 /* SwiftProperty.swift */,
+				65FAE4881F12432500495812 /* SwiftType.swift */,
+				65FAE4841F1242EA00495812 /* SwiftStruct.swift */,
+				65FAE48A1F12435A00495812 /* SwiftEnum.swift */,
+				65FAE4921F1243CC00495812 /* SwiftCodeLine.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		65FAE4911F1243BB00495812 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				65FAE48C1F12438F00495812 /* String+Parsing.swift */,
+				65FAE48E1F1243A600495812 /* String+Swift.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +162,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65FAE4851F1242EA00495812 /* SwiftStruct.swift in Sources */,
+				65FAE48B1F12435A00495812 /* SwiftEnum.swift in Sources */,
+				65FAE48F1F1243A600495812 /* String+Swift.swift in Sources */,
+				65FAE4891F12432500495812 /* SwiftType.swift in Sources */,
+				65C5BDF11F124BA40064EBBF /* SwiftObject.swift in Sources */,
+				65C5BDF31F1253A90064EBBF /* JSONType.swift in Sources */,
+				65FAE48D1F12438F00495812 /* String+Parsing.swift in Sources */,
+				65FAE4871F12430A00495812 /* SwiftProperty.swift in Sources */,
+				65FAE4931F1243CC00495812 /* SwiftCodeLine.swift in Sources */,
 				6546250D1EFEC588009D902E /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +317,7 @@
 				654625121EFEC588009D902E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
