@@ -8,14 +8,6 @@
 
 import Foundation
 
-// FIXME: Work out why it's always unknown for all types.
-// Maybe re-consider the parentType approach, and go for something more recursive like the other guy's
-// ultimately, you just want all the types in a flat array, so tha tyou can compared the types
-// may involve cutting out JSONType... it's getting confusing
-// And tidy up the fucking code!
-
-
-
 /// The type of a Swift object.
 indirect enum SwiftObject {
 	case string

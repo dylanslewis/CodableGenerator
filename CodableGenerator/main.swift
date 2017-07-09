@@ -27,7 +27,6 @@ import Foundation
 // FIXME: Add Float
 // FIXME: Add date
 // FIXME: Add NSNull
-// FIXME: Add key to dictionary style arrays
 let simpleExample = """
 {
 	"rootLevel": "Root level",
@@ -46,6 +45,16 @@ let simpleExample = """
 		"a": "aay",
 		"c": "cee"
 	}],
+	"hueArray": {
+		"1": {
+			"name": "Name",
+			"value": 1
+		},
+		"2": {
+			"name": "Name",
+			"value": 1
+		}
+	},
 	"arrayOfArray": [
 		[1,2],
 		[3,4]
@@ -63,6 +72,7 @@ let simpleExample = """
 
 // FIXME: Think if you want to handle arrays of different types... it counts as valid JSON. It surely can't be Codable
 // Answer: If all the objects inside the array conform to `Decodable`, it's ok
+// So basically, parse and create a type for each object in the array, try and do similarity analysis on them, and if there is > 1 type, put the type of the array as Decodable, put have extensions for each of the types contained within it.
 
 func jsonType(withName name: String, rawJSONDictionary: [String: Any]) -> JSONType {
 	var typeForKey: [String: SwiftObject] = [:]

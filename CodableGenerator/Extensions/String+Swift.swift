@@ -9,11 +9,6 @@
 import Foundation
 
 extension String {
-	var unpluralizedKey: String {
-		// FIXME: Do this or get user input
-		return self
-	}
-	
 	var swiftyPropertyName: String {
 		guard let firstCharacter = first else {
 			return self

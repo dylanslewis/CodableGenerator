@@ -21,7 +21,6 @@ struct SwiftStruct: SwiftType {
 		self.parentTypes = parentTypes
 	}
 	
-	// Init for Codable
 	init(name: String, typeForKey: [String: SwiftObject], parentTypes: [SwiftType] = []) {
 		var properties: [SwiftProperty] = []
 		typeForKey.enumerated().forEach { (arg) in
